@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title>Angeli e Demoni</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+  </head>
+  <body>
+    
+    <div class="container">
+      <nav class="navbar navbar-expand" style="border: white 4px solid;margin-bottom: 45px;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark"><a class="nav-link" href="riassunto.html" target="_blank">Riassunto</a></button>         
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark"><a class="nav-link" href="personaggi.html" target="_blank">Personaggi</a></button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark"><a class="nav-link" href="confronto.html" target="_blank">Libro VS Film</a></button>
+          </li>
+        </ul>
+        <form class="form-inline" action="/action_page.php" style="margin-left: 280px;">
+          <input class="form-control mr-sm-2" type="text" id="barra" placeholder="Cerca">
+        </form>
+        <button class="btn btn-success" type="submit" onclick="search()"><a href="#" id="bottone" target="_blank">Cerca</a></button>
+      </nav>
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Attenzione!</strong> In questo sito potrebbero essere presenti spoiler del libro!
+      </div>
+      <h1>Angeli e Demoni</h1>
+      <h4>-Tutto quello che c'è da sapere sul romanzo bestseller-</h4>
+      <img style="margin-top: 50px;"  src="book.jpg">
+      <p><kbd>Copertina del libro "Angeli e demoni"</kbd></p>
+      <div class="jumbotron">
+        <h4>Brevissima storia del libro</h4>
+        <p>
+          Angeli e demoni(titolo originale:"Angels & demons") è un romanzo thriller scritto nel 2000(pubblicato in Italia nel 2004) dall'autore Dan Brown.
+          E' il primo della lunga serie di libri che vede come loro protagonista il professore Robert Langdon. I libri successivi sono "Il codice Da Vinci" (pubblicato nel 2003),
+          "Il simbolo perduto" (pubblicato nel 2009), "Inferno" (pubblicato nel 2013) e "Origin" (pubblicato nel 2017). Nelle slide successive troverete le copertine di questi ultimi.
+        </p>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="book2.jpg" alt="Codice da Vinci" width="1100" height="500">
+              <div class="carousel-caption"></div>   
+            </div>
+            <div class="carousel-item">
+              <img src="book3.jpg" alt="il simbolo perduto" width="1100" height="500">
+              <div class="carousel-caption"></div>   
+            </div>
+            <div class="carousel-item">
+              <img src="book4.jpg" alt="Inferno" width="1100" height="500">
+              <div class="carousel-caption"></div>   
+            </div>
+            <div class="carousel-item">
+              <img src="book5.jpg" alt="Origin" width="1100" height="500">
+              <div class="carousel-caption"></div>   
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+      <p style="border-left: white 5px solid;">Utilizzare le seguenti parole-chiave per ricercare i siti relativi<br><kbd>riassunto</kbd>
+      per vedere il riassunto del libro, <br><kbd> personaggi</kbd>per la lista dei personaggi, <br><kbd> confronto</kbd>per visualizzare le differenze tra libro e film
+      <br>Se siete pigri potete utilizzare i bottoni relativi</p>
+      <p>Pagina realizzata da Dav-Zili</p>
+    </div>
+    <script>
+      function search(){
+          var testo = document.getElementById("barra").value;
+          if(testo == "riassunto"){
+              document.getElementById("bottone").href = "riassunto.html";
+          }
+          else if(testo == "personaggi"){
+              document.getElementById("bottone").href = "personaggi.html";
+          }
+          else if(testo == "confronto"){
+              document.getElementById("bottone").href = "confronto.html";
+          }
+          else{
+              document.getElementById("bottone").href = "error.html";
+          }
+      }
+    </script>
+  </body>
+</html>
